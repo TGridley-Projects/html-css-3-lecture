@@ -18,13 +18,21 @@ span {
 }
 
 .main-header img {
-  height: 75px;
+  height: 65px;
 }
 
-.main-header nav {
+.desktop-menu {
   width: 350px;
   display: flex;
   justify-content: space-between;
+}
+
+.dropdown {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
 }
 
 .animation-transition {
@@ -38,6 +46,20 @@ span {
 
 .react-logo {
   height: 400px;
+  }
+
+.spin-clockwise{
+  animation-name: spin;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.spin-counterClockwise{
+  animation-name: spin;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: reverse;
 }
 
 .transition-circle {
@@ -52,4 +74,66 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 2s;
+}
+
+.transition-circle:hover {
+  transform: scale(.5);
+  background: #3b3b3b;
+  color: #ffffff;
+  border-radius: 0%;
+}
+
+@media (max-width: 768px){
+  .main-header img{
+    height: 50px;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .dropdown {
+    display: initial;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    display: initial;
+    background-color: #3b3b3b;
+    position: fixed;
+    top: 125px;
+    right: 0px;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+@media(max-width: 500px){
+  .main-header img{
+    height: 35px;
+  }
+  .react-logo {
+    height: 250px;
+  }
+
+  .transition-circle {
+    height: 200px;
+    width: 200px;
+  }
+
+
+}
+
+@keyframes spin{
+  from{
+    transform: rotate(0deg)
+  }
+  to{
+    transform: rotate(360deg)
+  }
 }
