@@ -1,0 +1,55 @@
+.App {
+  text-align: center;
+}
+
+span {
+  font-size: 25px;
+}
+
+.main-header {
+  height: 125px;
+  background: #3B3B3B;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0px 25px;
+}
+
+.main-header img {
+  height: 75px;
+}
+
+.main-header nav {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.animation-transition {
+  height: calc(100vh - 125px);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.react-logo {
+  height: 400px;
+}
+
+.transition-circle {
+  height: 325px;
+  width: 325px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 5px solid #16D8FF;
+  color: #16D8FF;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
